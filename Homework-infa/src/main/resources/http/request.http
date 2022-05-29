@@ -1,0 +1,24 @@
+POST http://localhost:8080/park
+Content-Type: application/json
+
+{
+  "model" : "BMW",
+  "carNumber" : "12",
+  "color" : "black",
+  "amountOfHours" : 2,
+  "userId" : 1,
+  "address" : "Kazan"
+}
+
+###
+
+GET http://localhost:8080/slots?address=Kazan
+
+###
+
+POST http://localhost:8080/can-go
+Content-Type: application/json
+
+{
+  "carNumber" : ""
+}
