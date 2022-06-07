@@ -1,0 +1,68 @@
+### получить автора
+GET http://localhost:80/authors/7
+
+### получить авторов
+GET http://localhost:80/api/authors?page=0
+Authorization: Bearer:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IlVTRVIiLCJsb2dpbiI6InRlc3QxIn0._PupAjXfz3TrsAUKS_6zPJVuuACsXa5fk_vdkj-Q19A
+### создать автора
+POST http://localhost:80/authors
+Content-Type: application/json
+
+{
+  "firstName": "Alexandra",
+  "lastName": "Kuznetsova"
+}
+
+### обновить автора
+POST http://localhost:80/authors/update/15
+Content-Type: application/json
+
+{
+  "firstName": "Alexa",
+  "lastName": "Kuzn"
+}
+
+### добавить пост
+POST http://localhost:80/posts
+Content-Type: application/json
+
+{
+  "title": "Title",
+  "text": "Text",
+  "authorId": 15
+}
+
+### получить пост
+GET http://localhost:80/posts/1
+
+### получить посты от автора
+GET http://localhost:80/posts/by/15?page=0
+
+
+### обновить пост
+POST http://localhost:80/posts/update/15/1
+Content-Type: application/json
+
+{
+      "id": 1,
+      "createdAt": "2024-12-01T05:05:27.842657",
+      "title": "Title",
+      "text": "Text"
+    }
+
+### удалить пост
+POST http://localhost:80/posts/delete/15/1
+
+
+### signIn
+POST http://localhost/signIn
+Content-Type: application/json
+
+{
+  "login": "test1",
+  "password": "password"
+}
+
+
+### logout
+POST http://localhost/logout
